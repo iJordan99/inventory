@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Item;
+use App\Models\Warehouse;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main', [
+        'test' => Warehouse::find(1),
+        'lol' => Item::find(2)
+    ]);             
 });
