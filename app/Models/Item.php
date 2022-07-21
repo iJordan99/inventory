@@ -9,6 +9,8 @@ class Item extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     public function warehouses()
     {
         return $this->belongsToMany(Warehouse::class)->withTimestamps();

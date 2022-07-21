@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->boolean('update');
-            $table->boolean('delete');
+            $table->boolean('update_stock');
+            $table->boolean('delete_stock');
+            $table->boolean('add_stock');
+            $table->boolean('update_user');
         });
     }
 

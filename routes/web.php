@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('main', [
-        'test' => Warehouse::find(1),
+        'test' => Warehouse::all(),
         'lol' => Item::find(2)
     ]);             
 });
