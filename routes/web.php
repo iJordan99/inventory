@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WarehouseController;
 use App\Models\Item;
 use App\Models\Warehouse;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main', [
-        'test' => Warehouse::all(),
-        'lol' => Item::find(2)
-    ]);             
-});
+Route::get('/', [WarehouseController::class, 'index']);

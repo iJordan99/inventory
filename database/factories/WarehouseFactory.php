@@ -17,7 +17,8 @@ class WarehouseFactory extends Factory
     public function definition()
     {
         return [
-            'location' => fake()->city()
+            'location' => fake()->city(),
+            'name' => fake()->country(),
         ];
     }
 }
