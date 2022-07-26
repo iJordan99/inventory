@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        $warehouses = Warehouse::factory(5)->create();
-        $items = Item::factory(5)->create();
+        Warehouse::factory(5)->create();
+        Item::factory(15)->create();
         \App\Models\User::factory()->create([
             'name' => 'Jordan Smith',
             'email' => 'test@example.com',

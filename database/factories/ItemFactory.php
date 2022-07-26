@@ -17,7 +17,8 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->ean13()
+            'name' => fake()->word(),
+            'reference' => fake()->ean13(),
         ];
     }
 }

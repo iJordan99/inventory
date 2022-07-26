@@ -4,7 +4,7 @@
     <img src="{{ asset('Images/logistics_icon.svg') }}" alt="" srcset="">
   </div>
   <h3 class="mt-6 text-sm text-gray-500">
-    <a href="#">
+    <a href="/warehouse/{{ $warehouse->name }}">
       <span class="absolute inset-0"></span>
         {{ $warehouse->location }}  
     </a>

@@ -13,4 +13,12 @@ class WarehouseController extends Controller
             'warehouses' => Warehouse::all(),
         ]);
     }
+
+    public function show(Warehouse $warehouse)
+    {
+        return view('warehouse.show', [
+            'warehouse' => $warehouse,
+            'items' => Warehouse::find($warehouse->id)->items
+        ]);
+    }
 }

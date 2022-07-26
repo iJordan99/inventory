@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [WarehouseController::class, 'index']);
+
+Route::get('warehouse/{warehouse:name}',[WarehouseController::class, 'show']);
